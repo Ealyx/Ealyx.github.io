@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PortFolio : CV et Lettre de motivation</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">PortFolio</a>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <h1 class="mt-5">Bienvenue sur mon PortFolio</h1>
+                <p class="lead">Découvrez mon CV et ma lettre de motivation.</p>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h2>LEPITRE Gauvain</h2>
+                        </div>
+                        <div class="card-body">
+                            <img src="DSC_0651.jpg" class="img-fluid rounded-circle mb-3" alt="Photo de Gauvain LEPITRE">
+                            <p>Étudiant en première année du cycle ingénieur en option Informatique et Cybersécurité, je recherche actuellement une stage de 18 semaines débutant à partir de Septembre 2025</p>
+                            <ul class="nav nav-tabs" id="cvTabs" role="tablist">
+                                <li class="nav-item">
+                                    <button class="nav-link active" id="experiences-tab" data-bs-toggle="tab" data-bs-target="#experiences" type="button" aria-controls="experiences" aria-selected="true" role="tab">Expériences</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" aria-controls="education" aria-selected="false" role="tab">Éducation</button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link" id="competences-tab" data-bs-toggle="tab" data-bs-target="#competences" type="button" aria-controls="competences" aria-selected="false" role="tab">Compétences</button>
+                                </li>
+                            </ul>
+                        <div class="tab-content mt-3" id="cvTabsContent">
+                            <div class="tab-pane fade show active" id="experiences" aria-labelledby="experiences-tab">
+                                <div class="container my-4">
+                                    <h2 class="mb-3">Mes Projets & Expériences</h2>
+                                    <div id="projetsCarousel" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#projetsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Projet 1"></button>
+                                            <button type="button" data-bs-target="#projetsCarousel" data-bs-slide-to="1" aria-label="Projet 2"></button>
+                                            <button type="button" data-bs-target="#projetsCarousel" data-bs-slide-to="2" aria-label="Projet 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="projet1.jpg" class="d-block w-100" alt="Projet 1">
+                                                <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+                                                    <h5>Application de gestion de tâches</h5>
+                                                    <p>Projet universitaire réalisé en équipe avec Python, Flask et Git.</p>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="projet2.jpg" class="d-block w-100" alt="Projet 2">
+                                                <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+                                                    <h5>Stage ouvrier chez Amandis SAS</h5>
+                                                    <p>Découverte du monde professionnel et participation à des missions techniques (Juillet 2023).</p>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="projet3.jpg" class="d-block w-100" alt="Projet 3">
+                                                <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+                                                    <h5>Projet personnel : Portfolio Web</h5>
+                                                    <p>Création de ce site web avec HTML, CSS et Bootstrap.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#projetsCarousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Précédent</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#projetsCarousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Suivant</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="education" aria-labelledby="education-tab">
+                                <!-- Utilisation d'un List Group Bootstrap pour les diplômes -->
+                                <h5>Éducation</h5>
+                                <ul class="list-group mb-3">
+                                    <li class="list-group-item">
+                                        <strong>INSA Hauts-De-France</strong> – Cycle ingénieur Informatique et Cybersécurité <span class="badge bg-secondary">2023 - présent</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <strong>Baccalauréat Scientifique mention TB</strong> – Lycée Anguier <span class="badge bg-secondary">2023</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <script>
+                                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                                const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+                            </script>
+                            <!-- Ajout des tooltips dans la liste des compétences -->
+                            <div class="tab-pane fade" id="competences" aria-labelledby="competences-tab">
+                                <h5>Compétences</h5>
+                                <ul>
+                                    <li>
+                                        Programmation :
+                                        <span data-bs-toggle="tooltip" title="Avancé. Projets : gestion de tâches, scripts d'automatisation.">Python</span>,
+                                        <span data-bs-toggle="tooltip" title="Intermédiaire. Projets universitaires.">Java</span>,
+                                        <span data-bs-toggle="tooltip" title="Avancé. Création de ce portfolio.">HTML</span>,
+                                        <span data-bs-toggle="tooltip" title="Avancé. Mise en page et design de sites web.">CSS</span>,
+                                        <span data-bs-toggle="tooltip" title="Débutant. Dynamisation de pages web.">JavaScript</span>
+                                    </li>
+                                    <li>
+                                        Frameworks :
+                                        <span data-bs-toggle="tooltip" title="Utilisé pour le design de ce site.">Bootstrap</span>,
+                                        <span data-bs-toggle="tooltip" title="Développement d'applications web universitaires.">Flask</span>
+                                    </li>
+                                    <li>
+                                        Cybersécurité :
+                                        <span data-bs-toggle="tooltip" title="Notions de base, participation à des ateliers de sensibilisation.">notions de base, bonnes pratiques</span>
+                                    </li>
+                                    <li>
+                                        Outils :
+                                        <span data-bs-toggle="tooltip" title="Gestion de versions sur tous les projets.">Git</span>,
+                                        <span data-bs-toggle="tooltip" title="Utilisation quotidienne, scripts Bash.">Linux</span>
+                                    </li>
+                                    <li>
+                                        Langues :
+                                        <span data-bs-toggle="tooltip" title="Langue maternelle.">Français (natif)</span>,
+                                        <span data-bs-toggle="tooltip" title="Niveau B2, TOEIC 850.">Anglais (courant)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                            <!-- Bouton pour ouvrir la modale -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#lettreModal">
+                                Voir la lettre de motivation
+                            </button>
+
+                            <!-- Modale Bootstrap -->
+                            <div class="modal fade" id="lettreModal" tabindex="-1" aria-labelledby="lettreModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="lettreModalLabel">Lettre de motivation</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <p>
+                                      Madame, Monsieur,<br>
+                                      Actuellement étudiant en première année du cycle ingénieur à l'INSA Hauts-De-France, option Informatique et Cybersécurité, je suis à la recherche d’un stage de 18 semaines à partir de septembre 2025. Passionné par les nouvelles technologies et la sécurité informatique, je souhaite mettre mes compétences au service de votre entreprise et approfondir mes connaissances dans un environnement stimulant.<br>
+                                      Je vous remercie de l’attention portée à ma candidature.<br>
+                                      Cordialement,<br>
+                                      Gauvain LEPITRE
+                                    </p>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
